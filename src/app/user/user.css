@@ -1,0 +1,85 @@
+main {
+  width: 90%;
+  max-width: 50rem;
+  margin: 2.5rem auto;
+  display: grid;
+  grid-auto-flow: row;
+  gap: 2rem;
+}
+
+#users {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  overflow: auto;
+}
+
+#fallback {
+  font-weight: bold;
+  font-size: 1.15rem;
+  margin: 0;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  main {
+    margin: 4rem auto;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  #users {
+    flex-direction: column;
+  }
+
+  #fallback {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  img{
+    max-width: 100px;
+  }
+}
+/* User-Button */
+button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  font: inherit;
+  font-size: 1rem;
+  color: #c3b3d8;
+  background: #2c1e3f;
+  border: 1px solid #4a3666;
+  border-radius: 999px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover,
+button:focus-visible {
+  background: #3f2a5c;
+  color: #f0e6ff;
+}
+
+button:focus-visible {
+  outline: 2px solid #9965dd;
+  outline-offset: 2px;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button img {
+  width: 3rem;
+  height: 3rem;
+  max-width: none;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}

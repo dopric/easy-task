@@ -1,0 +1,9 @@
+
+    <ul id="users">
+        @for (user  of users; track $index) {
+        <li>
+           <app-user [avatar]="user.avatar" [name]="user.name" [id]="user.id"
+           (selectedUserChanged)="onSelectedUserChanged($event)"></app-user>     
+        </li>
+    }
+    </ul>
